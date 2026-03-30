@@ -9,7 +9,7 @@ Option A (no CLI install, uses `PYTHONPATH`):
 ```sh
 cd book-converter
 python3 -m pip install -r requirements.txt
-PYTHONPATH=src python3 -m book_converter /path/to/book.pdf
+PYTHONPATH=src python3 -m book_convert /path/to/book.pdf
 ```
 
 Option B (editable install, adds `book-convert`):
@@ -74,8 +74,8 @@ If you pass an output root, the `SomeBook/` folder is created inside that direct
 
 ## Architecture
 
-- `book_converter/cli.py`: CLI entry point and argument parsing.
-- `book_converter/convert.py`: conversion pipeline.
+- `book_convert/cli.py`: CLI entry point and argument parsing.
+- `book_convert/convert.py`: conversion pipeline.
   - Text extraction via `pdfminer.six`
   - Image extraction via `PyMuPDF`
   - Markdown formatting for headings, lists, callouts, and code blocks
