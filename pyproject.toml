@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "book-converter"
+version = "0.1.0"
+description = "Convert PDF books to Markdown"
+requires-python = ">=3.9"
+dependencies = ["pdfminer.six", "pymupdf"]
+
+[project.scripts]
+book-convert = "book_converter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
