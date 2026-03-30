@@ -1,2 +1,0 @@
-[console_scripts]
-book-convert = book_converter.cli:main
